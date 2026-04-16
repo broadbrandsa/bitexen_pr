@@ -18,23 +18,17 @@ export function CTA() {
 
         <FadeIn delay={100}>
           <h2 className="font-display font-black uppercase tracking-wider" style={{ fontSize: "var(--type-h2)" }}>
-            Let&apos;s <span className="text-gradient-cyan">Build This Together</span>
+            <span className="text-gradient-cyan">Next Steps</span>
           </h2>
         </FadeIn>
 
         <FadeIn delay={200}>
           <p className="mt-6 font-light leading-relaxed max-w-2xl mx-auto" style={{ fontSize: "var(--type-p1)", color: "var(--bitexen-text-secondary)" }}>
-            Bitexen has the platform, the fan token infrastructure, and the proven Turkish playbook. Broadbrand has the SA market knowledge, the media relationships, the creative muscle, and the technology stack to execute.
+            Ready to launch Bitexen in South Africa and redefine accessibility in finance — putting what was once out of reach firmly within the grasp of everyday investors.
           </p>
         </FadeIn>
 
         <FadeIn delay={300}>
-          <p className="mt-6 font-display font-bold text-lg md:text-xl tracking-wider uppercase" style={{ color: "var(--bitexen-gold)" }}>
-            The opportunity is clear. The timing is right.
-          </p>
-        </FadeIn>
-
-        <FadeIn delay={400}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
             <a
               href="mailto:hello@broadbrand.co.za"
@@ -47,7 +41,7 @@ export function CTA() {
               Get in Touch
             </a>
             <a
-              href="#opportunity"
+              href="#objective"
               className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.15em] uppercase px-8 py-4 rounded-full transition-all duration-300"
               style={{
                 background: "rgba(255,255,255,0.05)",
@@ -60,9 +54,9 @@ export function CTA() {
           </div>
         </FadeIn>
 
-        <FadeIn delay={500}>
+        <FadeIn delay={400}>
           <p className="mt-12 text-xs" style={{ color: "rgba(255,255,255,0.25)" }}>
-            Broadbrand / Digital Solutions Group · Confidential · 2026
+            Broadbrand · Confidential · 2026
           </p>
         </FadeIn>
       </div>

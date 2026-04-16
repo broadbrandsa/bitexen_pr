@@ -20,23 +20,22 @@ export function Hero() {
               color: "var(--bitexen-cyan)",
             }}
           >
-            South Africa Launch · 2026
+            South Africa Launch · April 2026
           </span>
         </div>
 
         {/* Main headline */}
         <h1 className="font-display font-black uppercase leading-none tracking-wider hero-animate-2" style={{ fontSize: "var(--type-h1)", lineHeight: 0.95 }}>
-          <span style={{ color: "#FFFFFF" }}>Owning the RWA</span>
+          <span style={{ color: "#FFFFFF" }}>A Borderless</span>
           <br />
-          <span className="text-gradient-cyan">Tokenisation Narrative</span>
+          <span className="text-gradient-cyan">Financial Platform</span>
           <br />
-          <span style={{ color: "rgba(255,255,255,0.4)" }}>in South Africa</span>
+          <span style={{ color: "rgba(255,255,255,0.4)" }}>for South Africa</span>
         </h1>
 
-        {/* Subtext */}
-        <p className="mt-6 text-base md:text-lg font-light leading-relaxed hero-animate-3" style={{ color: "var(--bitexen-text-secondary)", maxWidth: "42ch", margin: "1.5rem auto 0" }}>
-          A strategic proposal to launch Bitexen as a borderless financial platform,
-          democratising access to real-world asset tokenisation.
+        {/* Subtext — from PPTX objective */}
+        <p className="mt-6 text-base md:text-lg font-light leading-relaxed hero-animate-3" style={{ color: "var(--bitexen-text-secondary)", maxWidth: "52ch", margin: "1.5rem auto 0" }}>
+          Formally announcing the launch of Bitexen in South Africa — positioning it as a platform that enables users to trade in real-world assets while breaking down traditional barriers to entry, democratising access to investment opportunities through tokenisation.
         </p>
 
         {/* Logos */}

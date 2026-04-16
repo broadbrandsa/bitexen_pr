@@ -3,13 +3,10 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { label: "Opportunity", sectionId: "opportunity" },
-  { label: "Why Broadbrand", sectionId: "why-broadbrand" },
-  { label: "Competitors", sectionId: "competitors" },
-  { label: "Strategy", sectionId: "strategy" },
-  { label: "Creative", sectionId: "creative" },
-  { label: "Budget", sectionId: "budget" },
-  { label: "DSG", sectionId: "dsg" },
+  { label: "Objective", sectionId: "objective" },
+  { label: "Leadership", sectionId: "leadership" },
+  { label: "Content", sectionId: "content" },
+  { label: "Calendar", sectionId: "calendar" },
 ];
 
 export function Nav() {
