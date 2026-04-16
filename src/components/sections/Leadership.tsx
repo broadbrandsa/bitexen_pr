@@ -28,6 +28,7 @@ const mediaLogos = [
   { src: "/images/logo-iol.png", alt: "IOL" },
   { src: "/images/logo-hypertext.png", alt: "Hypertext" },
   { src: "/images/logo-morey.png", alt: "Morey Marketing" },
+  { src: "/images/WhatsApp Image 2026-04-16 at 13.09.16.jpeg", alt: "ByDesign" },
 ];
 
 export function Leadership() {

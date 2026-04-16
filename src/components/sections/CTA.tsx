@@ -26,11 +26,11 @@ export function CTA() {
             />
             <div className="w-px h-8" style={{ background: "rgba(6,214,242,0.2)" }} />
             <Image
-              src="/images/WhatsApp Image 2026-04-16 at 13.09.16.jpeg"
-              alt="ByDesign"
+              src="/images/broadbrand-white.png"
+              alt="Broadbrand"
               width={140}
-              height={32}
-              className="h-6 md:h-7 w-auto object-contain"
+              height={24}
+              className="h-5 md:h-6 w-auto object-contain opacity-50"
             />
           </div>
         </FadeIn>
