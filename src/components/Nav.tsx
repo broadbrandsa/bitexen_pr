@@ -89,16 +89,6 @@ export function Nav() {
 
         {/* Right side */}
         <div className="hidden lg:flex items-center gap-3">
-          <a
-            href="#cta"
-            className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.15em] uppercase px-5 py-2.5 rounded-full transition-all duration-300"
-            style={{
-              background: "linear-gradient(135deg, #06D6F2, #3B82F6)",
-              color: "#070B14",
-            }}
-          >
-            Next Steps
-          </a>
           <button
             className="text-[10px] font-medium uppercase tracking-widest transition-colors duration-200 ml-1"
             style={{ color: "rgba(255,255,255,0.2)" }}
@@ -148,14 +138,6 @@ export function Nav() {
               </a>
             );
           })}
-          <a
-            href="#cta"
-            className="block text-sm font-bold text-center py-3 rounded-full mt-2"
-            style={{ background: "linear-gradient(135deg, #06D6F2, #3B82F6)", color: "#070B14" }}
-            onClick={() => setMenuOpen(false)}
-          >
-            Next Steps
-          </a>
         </div>
       )}
     </nav>
