@@ -52,8 +52,13 @@ export function Hero() {
           </div>
         </div>
 
+        {/* Headline */}
+        <h1 className="font-display font-black uppercase tracking-wider hero-animate-2" style={{ fontSize: "var(--type-h1)", color: "#FFFFFF", lineHeight: 0.95 }}>
+          PR Strategy for <span className="text-gradient-cyan">Bitexen</span>
+        </h1>
+
         {/* Thin accent line */}
-        <div className="w-16 h-px hero-animate-2" style={{ background: "linear-gradient(90deg, transparent, var(--bitexen-cyan), transparent)" }} />
+        <div className="w-16 h-px hero-animate-3" style={{ background: "linear-gradient(90deg, transparent, var(--bitexen-cyan), transparent)" }} />
       </div>
     </section>
   );
