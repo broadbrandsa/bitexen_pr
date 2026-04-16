@@ -50,6 +50,17 @@ export function Hero() {
               priority
             />
           </div>
+          <div className="w-px h-8 md:h-10" style={{ background: "rgba(6,214,242,0.2)" }} />
+          <div className="relative h-8 md:h-10 w-auto">
+            <Image
+              src="/images/WhatsApp Image 2026-04-16 at 13.09.16.jpeg"
+              alt="ByDesign"
+              width={160}
+              height={40}
+              className="h-8 md:h-10 w-auto object-contain"
+              priority
+            />
+          </div>
         </div>
 
         {/* Headline */}
