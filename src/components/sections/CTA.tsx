@@ -1,16 +1,37 @@
 "use client";
 
+import Image from "next/image";
 import { FadeIn } from "@/components/FadeIn";
 
 export function CTA() {
   return (
-    <section id="cta" className="relative py-16 overflow-hidden grain" style={{ background: "var(--bitexen-section)" }}>
+    <section id="cta" className="relative py-20 md:py-28 overflow-hidden" style={{ background: "var(--bitexen-section)" }}>
+      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 50% 50% at 50% 50%, rgba(6,214,242,0.04) 0%, transparent 70%)" }} />
+
+      {/* Grid pattern */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        backgroundImage: "linear-gradient(rgba(6,214,242,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(6,214,242,0.02) 1px, transparent 1px)",
+        backgroundSize: "60px 60px",
+      }} />
+
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <FadeIn>
-          <div className="flex items-center justify-center gap-5">
-            <span className="font-display text-xl font-bold tracking-widest" style={{ color: "var(--bitexen-cyan)" }}>BITEXEN</span>
-            <div className="w-px h-6" style={{ background: "rgba(255,255,255,0.15)" }} />
-            <span className="text-sm font-semibold tracking-wider" style={{ color: "rgba(255,255,255,0.5)" }}>BROADBRAND</span>
+          <div className="flex items-center justify-center gap-6 md:gap-8">
+            <Image
+              src="/images/bitexen-logo.png"
+              alt="Bitexen South Africa"
+              width={140}
+              height={32}
+              className="h-7 md:h-8 w-auto object-contain"
+            />
+            <div className="w-px h-8" style={{ background: "rgba(6,214,242,0.2)" }} />
+            <Image
+              src="/images/broadbrand-white.png"
+              alt="Broadbrand"
+              width={140}
+              height={24}
+              className="h-5 md:h-6 w-auto object-contain opacity-50"
+            />
           </div>
         </FadeIn>
       </div>

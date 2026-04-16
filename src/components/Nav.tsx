@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const links = [
   { label: "Objective", sectionId: "objective" },
@@ -50,20 +51,26 @@ export function Nav() {
           ? "border-b bg-[#070B14]/95 backdrop-blur-xl"
           : "bg-transparent"
       }`}
-      style={{
-        borderColor: scrolled ? "rgba(6,214,242,0.08)" : "transparent",
-      }}
+      style={{ borderColor: scrolled ? "rgba(6,214,242,0.08)" : "transparent" }}
     >
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
+      <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+        {/* Logos */}
         <a href="#" className="flex items-center gap-3">
-          <span className="font-display text-base font-bold tracking-wider" style={{ color: "var(--bitexen-cyan)" }}>
-            BITEXEN
-          </span>
-          <div className="w-px h-5" style={{ background: "rgba(255,255,255,0.15)" }} />
-          <span className="text-xs font-semibold tracking-wide" style={{ color: "rgba(255,255,255,0.5)" }}>
-            BROADBRAND
-          </span>
+          <Image
+            src="/images/bitexen-logo.png"
+            alt="Bitexen"
+            width={100}
+            height={24}
+            className="h-5 w-auto object-contain"
+          />
+          <div className="w-px h-4" style={{ background: "rgba(6,214,242,0.15)" }} />
+          <Image
+            src="/images/broadbrand-white.png"
+            alt="Broadbrand"
+            width={90}
+            height={18}
+            className="h-3.5 w-auto object-contain opacity-50"
+          />
         </a>
 
         {/* Desktop links */}
@@ -76,9 +83,9 @@ export function Nav() {
                 href={`#${link.sectionId}`}
                 className="relative px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wide uppercase transition-all duration-200"
                 style={{
-                  color: active ? "var(--bitexen-cyan)" : "rgba(255,255,255,0.45)",
-                  background: active ? "rgba(6,214,242,0.08)" : "transparent",
-                  border: active ? "1px solid rgba(6,214,242,0.2)" : "1px solid transparent",
+                  color: active ? "var(--bitexen-cyan)" : "rgba(255,255,255,0.4)",
+                  background: active ? "rgba(6,214,242,0.06)" : "transparent",
+                  border: active ? "1px solid rgba(6,214,242,0.15)" : "1px solid transparent",
                 }}
               >
                 {link.label}
@@ -87,10 +94,10 @@ export function Nav() {
           })}
         </div>
 
-        {/* Right side */}
-        <div className="hidden lg:flex items-center gap-3">
+        {/* Lock button */}
+        <div className="hidden lg:flex items-center">
           <button
-            className="text-[10px] font-medium uppercase tracking-widest transition-colors duration-200 ml-1"
+            className="text-[10px] font-medium uppercase tracking-widest transition-colors duration-200"
             style={{ color: "rgba(255,255,255,0.2)" }}
             onClick={() => {
               try { localStorage.removeItem("bitexen_sa_v1_unlocked"); } catch {}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
+import Image from "next/image";
 
 const CORRECT_CODE = "Bitexen@SA2026";
 const STORAGE_KEY = "bitexen_sa_v1_unlocked";
@@ -24,7 +25,6 @@ export function LockScreen({ children }: { children: React.ReactNode }) {
 
   const handleSubmit = useCallback(() => {
     if (code === CORRECT_CODE) {
-      // Show unlock animation
       const steps = ["Verifying...", "Identity confirmed", "Clearance granted", "Access granted"];
       let i = 0;
       const interval = setInterval(() => {
@@ -77,129 +77,100 @@ export function LockScreen({ children }: { children: React.ReactNode }) {
           overflow: "hidden",
         }}
       >
-        {/* Background glow */}
-        <div
-          className="absolute top-0 left-0 right-0 pointer-events-none"
-          style={{
-            height: "50vh",
-            background:
-              "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(6,214,242,0.08) 0%, transparent 70%)",
-          }}
-        />
-        <div
-          className="absolute bottom-0 left-0 right-0 pointer-events-none"
-          style={{
-            height: "40vh",
-            background:
-              "radial-gradient(ellipse 50% 50% at 50% 100%, rgba(139,92,246,0.06) 0%, transparent 70%)",
-          }}
-        />
+        {/* Background effects */}
+        <div className="absolute top-0 left-0 right-0 pointer-events-none" style={{ height: "50vh", background: "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(6,214,242,0.06) 0%, transparent 70%)" }} />
+        <div className="absolute bottom-0 left-0 right-0 pointer-events-none" style={{ height: "40vh", background: "radial-gradient(ellipse 50% 50% at 50% 100%, rgba(139,92,246,0.04) 0%, transparent 70%)" }} />
+
+        {/* Grid */}
+        <div className="absolute inset-0 pointer-events-none" style={{
+          backgroundImage: "linear-gradient(rgba(6,214,242,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(6,214,242,0.02) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }} />
 
         <div className="relative z-10 flex flex-col items-center gap-8 px-6 text-center max-w-md w-full">
-          {/* Confidential badge */}
-          <span
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase"
-            style={{
-              background: "rgba(6,214,242,0.08)",
-              border: "1px solid rgba(6,214,242,0.2)",
-              color: "var(--bitexen-cyan)",
-            }}
-          >
-            <span className="relative flex h-1.5 w-1.5">
-              <span
-                className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
-                style={{ background: "var(--bitexen-cyan)" }}
-              />
-              <span
-                className="relative inline-flex rounded-full h-1.5 w-1.5"
-                style={{ background: "var(--bitexen-cyan)" }}
-              />
-            </span>
-            Confidential Proposal
-          </span>
-
           {/* Logos */}
-          <div className="flex items-center gap-4">
-            <span className="font-display text-lg font-bold tracking-wider" style={{ color: "var(--bitexen-cyan)" }}>
-              BITEXEN
-            </span>
-            <div className="w-px h-5" style={{ background: "rgba(255,255,255,0.15)" }} />
-            <span className="text-sm font-semibold tracking-wide" style={{ color: "rgba(255,255,255,0.6)" }}>
-              BROADBRAND
-            </span>
+          <div className="flex items-center gap-5">
+            <Image
+              src="/images/bitexen-logo.png"
+              alt="Bitexen South Africa"
+              width={150}
+              height={36}
+              className="h-8 md:h-9 w-auto object-contain"
+              priority
+            />
+            <div className="w-px h-8" style={{ background: "rgba(6,214,242,0.2)" }} />
+            <Image
+              src="/images/broadbrand-white.png"
+              alt="Broadbrand"
+              width={140}
+              height={24}
+              className="h-5 md:h-6 w-auto object-contain opacity-50"
+              priority
+            />
           </div>
 
-          {/* Headline */}
-          <h1
-            className="font-display font-black leading-none tracking-tight"
-            style={{
-              fontSize: "var(--type-h1)",
-              color: "#FFFFFF",
-              lineHeight: 0.95,
-            }}
-          >
-            Enter access
-            <br />
-            code to{" "}
-            <span className="text-gradient-cyan">unlock</span>
-          </h1>
-
-          <p className="text-sm" style={{ color: "var(--bitexen-text-secondary)" }}>
-            This proposal is password-protected.
-          </p>
+          {/* Thin line separator */}
+          <div className="w-12 h-px" style={{ background: "linear-gradient(90deg, transparent, var(--bitexen-cyan), transparent)" }} />
 
           {/* Code input */}
-          <div className="w-full max-w-sm">
+          <div className="w-full max-w-xs">
             <input
               ref={inputRef}
               type="text"
               value={code}
               onChange={(e) => setCode(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Enter code..."
+              placeholder="Enter access code"
               autoFocus
-              className="w-full px-5 py-4 rounded-2xl text-center text-base font-semibold tracking-wider transition-all duration-200 outline-none"
+              className="w-full px-5 py-4 rounded-2xl text-center text-sm font-semibold tracking-wider transition-all duration-200 outline-none"
               style={{
-                background: error ? "rgba(239,68,68,0.1)" : "rgba(6,214,242,0.06)",
+                background: error ? "rgba(239,68,68,0.08)" : "rgba(6,214,242,0.04)",
                 border: error
-                  ? "2px solid rgba(239,68,68,0.5)"
+                  ? "1px solid rgba(239,68,68,0.4)"
                   : code
-                  ? "2px solid rgba(6,214,242,0.4)"
-                  : "2px solid rgba(6,214,242,0.12)",
+                  ? "1px solid rgba(6,214,242,0.3)"
+                  : "1px solid rgba(6,214,242,0.08)",
                 color: error ? "rgba(239,68,68,0.9)" : "#FFFFFF",
-                boxShadow: code && !error ? "0 0 30px rgba(6,214,242,0.1)" : "none",
+                boxShadow: code && !error ? "0 0 40px rgba(6,214,242,0.06)" : "none",
               }}
             />
           </div>
 
-          {/* Submit button */}
+          {/* Submit */}
           <button
             onClick={handleSubmit}
-            className="px-8 py-3 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300"
+            className="px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-300"
             style={{
-              background: "linear-gradient(135deg, #06D6F2, #3B82F6)",
-              color: "#070B14",
+              background: "linear-gradient(135deg, rgba(6,214,242,0.15), rgba(59,130,246,0.15))",
+              border: "1px solid rgba(6,214,242,0.2)",
+              color: "var(--bitexen-cyan)",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-            onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "linear-gradient(135deg, rgba(6,214,242,0.25), rgba(59,130,246,0.25))";
+              e.currentTarget.style.borderColor = "rgba(6,214,242,0.4)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "linear-gradient(135deg, rgba(6,214,242,0.15), rgba(59,130,246,0.15))";
+              e.currentTarget.style.borderColor = "rgba(6,214,242,0.2)";
+            }}
           >
-            Unlock Proposal
+            Unlock
           </button>
 
           {/* Error */}
           {error && (
-            <p className="text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(239,68,68,0.8)" }}>
-              Incorrect code — try again
+            <p className="text-[10px] font-bold uppercase tracking-widest" style={{ color: "rgba(239,68,68,0.7)" }}>
+              Incorrect code
             </p>
           )}
 
           {/* Unlock steps */}
           {unlockSteps.length > 0 && (
-            <div className="flex flex-col gap-2 mt-2">
+            <div className="flex flex-col gap-1.5 mt-2">
               {unlockSteps.map((step, i) => (
                 <span
                   key={i}
-                  className="text-xs font-semibold tracking-wider uppercase"
+                  className="text-[10px] font-semibold tracking-wider uppercase"
                   style={{
                     color: "var(--bitexen-cyan)",
                     animation: "unlockStep 0.3s ease both",
