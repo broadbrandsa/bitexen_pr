@@ -100,11 +100,11 @@ export function LockScreen({ children }: { children: React.ReactNode }) {
             />
             <div className="w-px h-8" style={{ background: "rgba(6,214,242,0.2)" }} />
             <Image
-              src="/images/broadbrand-white.png"
-              alt="Broadbrand"
+              src="/images/WhatsApp Image 2026-04-16 at 13.09.16.jpeg"
+              alt="ByDesign"
               width={140}
-              height={24}
-              className="h-5 md:h-6 w-auto object-contain opacity-50"
+              height={36}
+              className="h-7 md:h-8 w-auto object-contain"
               priority
             />
           </div>

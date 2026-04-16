@@ -65,11 +65,11 @@ export function Nav() {
           />
           <div className="w-px h-4" style={{ background: "rgba(6,214,242,0.15)" }} />
           <Image
-            src="/images/broadbrand-white.png"
-            alt="Broadbrand"
+            src="/images/WhatsApp Image 2026-04-16 at 13.09.16.jpeg"
+            alt="ByDesign"
             width={90}
-            height={18}
-            className="h-3.5 w-auto object-contain opacity-50"
+            height={24}
+            className="h-5 w-auto object-contain"
           />
         </a>
 

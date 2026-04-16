@@ -40,13 +40,13 @@ export function Hero() {
             />
           </div>
           <div className="w-px h-8 md:h-10" style={{ background: "rgba(6,214,242,0.2)" }} />
-          <div className="relative h-6 md:h-7 w-auto">
+          <div className="relative h-8 md:h-10 w-auto">
             <Image
-              src="/images/broadbrand-white.png"
-              alt="Broadbrand"
+              src="/images/WhatsApp Image 2026-04-16 at 13.09.16.jpeg"
+              alt="ByDesign"
               width={180}
-              height={28}
-              className="h-6 md:h-7 w-auto object-contain opacity-60"
+              height={40}
+              className="h-8 md:h-10 w-auto object-contain"
               priority
             />
           </div>
