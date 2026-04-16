@@ -1,13 +1,24 @@
 "use client";
 
 import Image from "next/image";
+import { ParallaxImage } from "@/components/ParallaxImage";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[60vh] flex flex-col items-center justify-center overflow-hidden grain">
-      {/* Ambient glow */}
-      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(6,214,242,0.07) 0%, transparent 60%)" }} />
-      <div className="absolute bottom-[-10%] right-[10%] w-[400px] h-[400px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(139,92,246,0.05) 0%, transparent 70%)" }} />
+    <section className="relative min-h-[60vh] flex flex-col items-center justify-center overflow-hidden">
+      {/* Background image with parallax */}
+      <ParallaxImage
+        src="/images/mario-klassen-70YxSTWa2Zw-unsplash.jpg"
+        alt=""
+        priority
+        speed={0.3}
+        imgStyle={{ opacity: 0.35 }}
+      />
+
+      {/* Dark overlay gradient */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        background: "linear-gradient(to bottom, rgba(7,11,20,0.7) 0%, rgba(7,11,20,0.5) 40%, rgba(7,11,20,0.8) 100%)",
+      }} />
 
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 pointer-events-none" style={{
