@@ -6,17 +6,15 @@ const months = [
   {
     month: "Month 1",
     start: "April 15",
-    end: "May 14",
-    theme: "Freedom Day (April 27)",
-    content: "Media release: As South Africa intensifies its push to attract direct foreign investment, its mature and well-regulated financial system is increasingly being recognised as a strategic gateway for next-generation financial infrastructure. Bitexen brings an established track record in real-world asset tokenization, introducing infrastructure that enables the full lifecycle of digital assets.",
-    events: "Media meet & greet with key local media and Bitexen leadership team (targeting 4 meetings by April 24)",
+    theme: "27 April \u2014 Freedom Day",
+    content: "Media release: As South Africa intensifies its push to attract direct foreign investment, its mature and well-regulated financial system is increasingly being recognised as a strategic gateway for next-generation financial infrastructure. Bitexen brings an established track record in real-world asset tokenization, introducing infrastructure that enables the full lifecycle of digital assets. South Africa becomes an active participant in shaping the future of financial markets, leveraging its institutional strength, regulatory maturity, and growing digital asset adoption to position itself as a hub for innovation on the continent.",
+    events: "Media meet & greet with key local media and Bitexen leadership team. (targeting 4 meetings by April 24)",
     linkedin: "Mark: Re-share earned media coverage about the launch of Bitexen in South Africa with insight as to when trading goes live.",
   },
   {
     month: "Month 2",
     start: "May 15",
-    end: "June 14",
-    theme: "Workers\u2019 Day (May 1), Africa Month",
+    theme: "1st \u2014 Workers\u2019 Day, Africa Month",
     content: "Thought leadership: Banking on the unbanked \u2014 low-cost transactions for the African diaspora.",
     events: "Bitexen RSA launch",
     linkedin: "Mark: Re-share earned media coverage, with insight about the need for low-cost transactions and remittance fees across the African diaspora.",
@@ -24,18 +22,16 @@ const months = [
   {
     month: "Month 3",
     start: "June 15",
-    end: "July 14",
-    theme: "Youth Month, Youth Day (June 16)",
-    content: "Media release: Here\u2019s the opportunity to own a wine farm \u2014 Arra combines fine wine, premium land and lifestyle access with blockchain technology, AVT creates a bridge between heritage and innovation. Interview pitches: Wine farm launch for key broadcast media.",
-    events: "Wine farm launch and trading goes live. Wine media drops (TBC).",
+    theme: "Youth Month, 16th \u2014 Youth Day",
+    content: "Media release: Here\u2019s the opportunity to own a wine farm \u2013 Arra combines fine wine, premium land and lifestyle access with blockchain technology, AVT creates a bridge between heritage and innovation. Interview pitches: Wine farm launch \u2014 interviews for key broadcast media.",
+    events: "Wine farm launch and trading goes live. Wine Media drops (TBC).",
     linkedin: "Mark: Re-share earned media coverage with insight about the upcoming launch of the wine farm asset.",
   },
   {
     month: "Initial Period Ends",
     start: "July 15",
-    end: "",
-    theme: "Review & Next Phase",
-    content: "Media release: Padel isn\u2019t just a phase \u2014 how to turn your hobby into long-term investment. Interview pitches to key media.",
+    theme: "Youth Month, 16th \u2014 Youth Day",
+    content: "Media release: Padel isn\u2019t just a phase, how to turn your hobby into long term investment. Interview pitches.",
     events: "Padel event (TBC)",
     linkedin: "Matthew: Re-share earned media coverage and provide excitement around the padel collaboration.",
   },
@@ -50,11 +46,8 @@ export function ContentCalendar() {
         <FadeIn>
           <span className="section-label">Integrated Calendar</span>
           <h2 className="font-display font-black uppercase tracking-wider mt-4" style={{ fontSize: "var(--type-h2)" }}>
-            Three-Month <span className="text-gradient-cyan">Content Calendar</span>
+            Three Month <span className="text-gradient-cyan">Integrated Content Calendar</span>
           </h2>
-          <p className="mt-4 font-light max-w-3xl" style={{ fontSize: "var(--type-p1)", color: "var(--bitexen-text-secondary)" }}>
-            A phased content and engagement plan aligned to South African thematic moments.
-          </p>
         </FadeIn>
 
         <div className="space-y-4 mt-12">
@@ -81,7 +74,7 @@ export function ContentCalendar() {
                     <p className="text-sm font-light mt-2 leading-relaxed" style={{ color: "var(--bitexen-text-secondary)" }}>{m.content}</p>
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold tracking-wider uppercase" style={{ color: "var(--bitexen-purple)" }}>Events & Engagements</span>
+                    <span className="text-[10px] font-bold tracking-wider uppercase" style={{ color: "var(--bitexen-purple)" }}>Events and Engagements</span>
                     <p className="text-sm font-light mt-2 leading-relaxed" style={{ color: "var(--bitexen-text-secondary)" }}>{m.events}</p>
                   </div>
                   <div>

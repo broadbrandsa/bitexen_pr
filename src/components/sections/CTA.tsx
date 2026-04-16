@@ -17,18 +17,6 @@ export function CTA() {
         </FadeIn>
 
         <FadeIn delay={100}>
-          <h2 className="font-display font-black uppercase tracking-wider" style={{ fontSize: "var(--type-h2)" }}>
-            <span className="text-gradient-cyan">Next Steps</span>
-          </h2>
-        </FadeIn>
-
-        <FadeIn delay={200}>
-          <p className="mt-6 font-light leading-relaxed max-w-2xl mx-auto" style={{ fontSize: "var(--type-p1)", color: "var(--bitexen-text-secondary)" }}>
-            Ready to launch Bitexen in South Africa and redefine accessibility in finance — putting what was once out of reach firmly within the grasp of everyday investors.
-          </p>
-        </FadeIn>
-
-        <FadeIn delay={300}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
             <a
               href="mailto:hello@broadbrand.co.za"
@@ -40,24 +28,7 @@ export function CTA() {
             >
               Get in Touch
             </a>
-            <a
-              href="#objective"
-              className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.15em] uppercase px-8 py-4 rounded-full transition-all duration-300"
-              style={{
-                background: "rgba(255,255,255,0.05)",
-                border: "1px solid rgba(6,214,242,0.2)",
-                color: "var(--bitexen-cyan)",
-              }}
-            >
-              Review Proposal
-            </a>
           </div>
-        </FadeIn>
-
-        <FadeIn delay={400}>
-          <p className="mt-12 text-xs" style={{ color: "rgba(255,255,255,0.25)" }}>
-            Broadbrand · Confidential · 2026
-          </p>
         </FadeIn>
       </div>
     </section>

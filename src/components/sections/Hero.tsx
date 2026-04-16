@@ -20,33 +20,19 @@ export function Hero() {
               color: "var(--bitexen-cyan)",
             }}
           >
-            South Africa Launch · April 2026
+            South Africa Launch
           </span>
         </div>
 
-        {/* Main headline */}
-        <h1 className="font-display font-black uppercase leading-none tracking-wider hero-animate-2" style={{ fontSize: "var(--type-h1)", lineHeight: 0.95 }}>
-          <span style={{ color: "#FFFFFF" }}>A Borderless</span>
-          <br />
-          <span className="text-gradient-cyan">Financial Platform</span>
-          <br />
-          <span style={{ color: "rgba(255,255,255,0.4)" }}>for South Africa</span>
-        </h1>
-
-        {/* Subtext — from PPTX objective */}
-        <p className="mt-6 text-base md:text-lg font-light leading-relaxed hero-animate-3" style={{ color: "var(--bitexen-text-secondary)", maxWidth: "52ch", margin: "1.5rem auto 0" }}>
-          Formally announcing the launch of Bitexen in South Africa — positioning it as a platform that enables users to trade in real-world assets while breaking down traditional barriers to entry, democratising access to investment opportunities through tokenisation.
-        </p>
-
         {/* Logos */}
-        <div className="flex items-center justify-center gap-5 mt-10 hero-animate-4">
+        <div className="flex items-center justify-center gap-5 mt-2 mb-10 hero-animate-2">
           <span className="font-display text-xl font-bold tracking-widest" style={{ color: "var(--bitexen-cyan)" }}>BITEXEN</span>
           <div className="w-px h-6" style={{ background: "rgba(255,255,255,0.15)" }} />
           <span className="text-sm font-semibold tracking-wider" style={{ color: "rgba(255,255,255,0.5)" }}>BROADBRAND</span>
         </div>
 
         {/* Scroll indicator */}
-        <div className="mt-16 hero-animate-5">
+        <div className="mt-16 hero-animate-3">
           <FadeIn>
             <div className="flex flex-col items-center gap-2">
               <span className="text-[10px] font-bold tracking-[0.2em] uppercase" style={{ color: "rgba(255,255,255,0.25)" }}>Scroll to explore</span>

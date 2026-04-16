@@ -5,11 +5,11 @@ import { FadeIn } from "@/components/FadeIn";
 const communicationOpportunities = [
   {
     title: "Opinion Pieces",
-    desc: "Focused on the democratisation of assets for South African audiences.",
+    desc: "Opinion pieces that focus the democratisation of assets for South African audiences.",
   },
   {
     title: "LinkedIn Posts",
-    desc: "From the local leadership team unpacking how Bitexen is creating access to unique investment opportunities using their financial platform.",
+    desc: "LinkedIn posts from the local leadership team unpacking how Bitexen is creating access to unique investment opportunities using their financial platform.",
   },
   {
     title: "Showcasing Local Expertise",
@@ -46,30 +46,6 @@ export function Leadership() {
             </FadeIn>
           ))}
         </div>
-
-        {/* Channels */}
-        <FadeIn delay={400}>
-          <h3 className="font-display font-bold text-sm tracking-wider uppercase mt-16 mb-6" style={{ color: "var(--bitexen-cyan)" }}>
-            Channel Strategy
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { channel: "Digital", icon: "🌐" },
-              { channel: "Media", icon: "📰" },
-              { channel: "LinkedIn", icon: "💼" },
-              { channel: "Events", icon: "🎤" },
-            ].map((c, i) => (
-              <FadeIn key={c.channel} delay={450 + i * 80}>
-                <div className="card-glow p-5 text-center">
-                  <span className="text-2xl">{c.icon}</span>
-                  <p className="font-display font-bold text-xs tracking-wider uppercase mt-3" style={{ color: "#FFFFFF" }}>
-                    {c.channel}
-                  </p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </FadeIn>
       </div>
     </section>
   );
